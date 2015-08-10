@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -34,7 +34,7 @@ public class MainActivity
         extends ActionBarActivity {
 
 
-    private Button theme_set_bt, app_set_bt, my_theme_set_bt, about_app_bt;
+    private LinearLayout theme_set_bt, app_set_bt, my_theme_set_bt, about_app_bt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,10 +145,10 @@ public class MainActivity
 
     private void init() {
 
-        theme_set_bt = (Button) findViewById(R.id.theme_set_bt);
-        app_set_bt = (Button) findViewById(R.id.app_set_bt);
-        my_theme_set_bt = (Button) findViewById(R.id.My_theme_set_bt);
-        about_app_bt = (Button) findViewById(R.id.about_app);
+        theme_set_bt = (LinearLayout) findViewById(R.id.theme_set_bt);
+        app_set_bt = (LinearLayout) findViewById(R.id.app_set_bt);
+        my_theme_set_bt = (LinearLayout) findViewById(R.id.My_theme_set_bt);
+        about_app_bt = (LinearLayout) findViewById(R.id.about_app);
 
         if (DateUtils.getSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW) != 0) {
 

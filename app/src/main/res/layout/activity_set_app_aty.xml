@@ -13,22 +13,74 @@
         android:layout_alignParentBottom="true">
 
 
-        <Button
+        <!--<Button
             android:id="@+id/set_usual_function"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/set_usual_function"
+            android:layout_weight="1"
             android:background="@drawable/icon_rt"
-            android:layout_weight="1"/>
+            android:text="@string/set_usual_function"/>-->
+
+        <LinearLayout
+            android:id="@+id/set_usual_function"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/icon_rt"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:src="@drawable/icon_set_function"/>
 
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/set_usual_function"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
+
+        <!--<Button
             android:id="@+id/about_app"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/icon_lt"
-            android:text="@string/about_app"/>
+            android:text="@string/about_app"/>-->
+
+
+        <LinearLayout
+            android:id="@+id/about_app"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/icon_lt"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:src="@drawable/icon_about"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/about_app"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -36,21 +88,74 @@
         android:layout_height="200dp"
         android:layout_above="@+id/linearLayout">
 
-        <Button
+        <!--<Button
             android:id="@+id/set_app_style"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/set_app_style"
+            android:layout_weight="1"
             android:background="@drawable/icon_rb"
-            android:layout_weight="1"/>
+            android:text="@string/set_app_style"/>-->
 
-        <Button
+
+        <LinearLayout
+            android:id="@+id/set_app_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/icon_rb"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:src="@drawable/icon_set_style"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/set_app_style"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
+
+        <!--<Button
             android:id="@+id/set_usual_app_bt"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/icon_lb"
-            android:text="@string/set_usual_app"/>
+            android:text="@string/set_usual_app"/>-->
+
+        <LinearLayout
+            android:id="@+id/set_usual_app_bt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/icon_lb"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:src="@drawable/icon_set_app"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/set_usual_app"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

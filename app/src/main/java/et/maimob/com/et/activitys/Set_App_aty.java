@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
 
 import et.maimob.com.et.R;
 import et.maimob.com.et.activitys.appset.Set_App_Style_aty;
@@ -16,7 +16,7 @@ public class Set_App_aty
         extends ActionBarActivity {
 
 
-    private Button set_app_style_bt, set_usual_app_bt, set_usual_function_bt, about_app_bt;
+    private LinearLayout set_app_style_bt, set_usual_app_bt, set_usual_function_bt, about_app_bt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +64,9 @@ public class Set_App_aty
 
     private void init() {
 
-        set_usual_app_bt = (Button) findViewById(R.id.set_usual_app_bt);
-        about_app_bt = (Button) findViewById(R.id.about_app);
-        set_app_style_bt = (Button) findViewById(R.id.set_app_style);
-        set_usual_function_bt = (Button) findViewById(R.id.set_usual_function);
+        set_usual_app_bt = (LinearLayout) findViewById(R.id.set_usual_app_bt);
+        about_app_bt = (LinearLayout) findViewById(R.id.about_app);
+        set_app_style_bt = (LinearLayout) findViewById(R.id.set_app_style);
+        set_usual_function_bt = (LinearLayout) findViewById(R.id.set_usual_function);
     }
 }
