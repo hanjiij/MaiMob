@@ -30,6 +30,8 @@ public class GetAppInfo {
 
         this.context = context;
         Init();
+
+
     }
 
     /**
