@@ -58,7 +58,5 @@ public class My_Theme_aty
 
     private void setListener() {
 
-
-
     }
 }

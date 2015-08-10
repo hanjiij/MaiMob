@@ -133,26 +133,31 @@ public class GetAppInfo {
         String app_name;
         for (int i = 0; i < list.size(); i++) {
 
-            appInfo = new AppInfo();
+            try {
+                appInfo = new AppInfo();
 
-            intent = list.get(i).baseIntent;
-            resolveInfo = packageManager.resolveActivity(intent, 0);
+                intent = list.get(i).baseIntent;
+                resolveInfo = packageManager.resolveActivity(intent, 0);
 
-            package_name = intent.getComponent().getPackageName();
-            app_name = resolveInfo.loadLabel(packageManager).toString();
+                package_name = intent.getComponent().getPackageName();
+                app_name = resolveInfo.loadLabel(packageManager).toString();
 
-            intent = packageManager.getLaunchIntentForPackage(package_name);
+                intent = packageManager.getLaunchIntentForPackage(package_name);
 
-            if (intent != null &&
-                    (app_name.length() < 4 || !app_name.substring(0, 3).equals("com"))/* &&
-                    count < 8*/ && !package_name.equals(context.getPackageName())) {
+                if (intent != null &&
+                        (app_name.length() < 4 || !app_name.substring(0, 3).equals("com"))/* &&
+                        count < 8*/ && !package_name.equals(context.getPackageName())) {
 
-                // 设置appinfo信息
-                appInfo.setIcon(resolveInfo.loadIcon(packageManager));
-                appInfo.setAppName(app_name);
-                appInfo.setPackageName(package_name);
+                    // 设置appinfo信息
+                    appInfo.setIcon(resolveInfo.loadIcon(packageManager));
+                    appInfo.setAppName(app_name);
+                    appInfo.setPackageName(package_name);
 
-                listAppInfo.add(appInfo);
+                    listAppInfo.add(appInfo);
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
         return listAppInfo;

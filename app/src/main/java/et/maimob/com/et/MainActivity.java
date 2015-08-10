@@ -76,7 +76,8 @@ public class MainActivity
             // 判断是否为第一次打开软件，若是则向表中添加最近使用的app
             List<AppInfo> recentlyListInfo = GetAppInfo.Get_Recently_App_Info(MainActivity.this);
 
-            if (recentlyListInfo.size()==1) {
+            if (recentlyListInfo.size()==0) {
+
                 AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
 
                 alert.setMessage("还未设置常用App，点击设置");

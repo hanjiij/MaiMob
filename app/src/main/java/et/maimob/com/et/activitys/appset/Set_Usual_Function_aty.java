@@ -47,7 +47,7 @@ public class Set_Usual_Function_aty
         setContentView(R.layout.activity_set__usual__function_aty);
 
         default_functionInfo =
-                new FunctionInfo(-1, "", getResources().getDrawable(R.drawable.add_item));
+                new FunctionInfo(-1, "", getResources().getDrawable(R.drawable.icon_add));
 
         //初始化常用功能，当数据库中为空，则初始化四个功能进入面板
         if (DateUtils.getFunctions(Set_Usual_Function_aty.this).size() == 0) {

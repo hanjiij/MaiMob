@@ -64,7 +64,7 @@ public class Set_Usual_App_aty
         usual_App_Info_GridView = (MyGridView) findViewById(R.id.usual_app_info_gridveiw);
         usual_app_info_list = new ArrayList<>();
         usual_app_info_listcopy = new ArrayList<>();
-        default_app_info = new AppInfo("", null, getResources().getDrawable(R.drawable.add_item));
+        default_app_info = new AppInfo("", null, getResources().getDrawable(R.drawable.icon_add));
 
         getAppInfo = new GetAppInfo(Set_Usual_App_aty.this);
 
