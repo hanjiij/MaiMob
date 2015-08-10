@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="funcName">
+        <item>wifi</item>
+        <item>移动流量数据</item>
+        <item>蓝牙</item>
+        <item>截屏</item>
+        <item>手电筒</item>
+        <item>系统设置</item>
+        <item>悬浮框的配置</item>
+        <item>热点</item>
+        <item>飞行模式</item>
+        <item>静音</item>
+        <item>GPS</item>
+    </string-array>
+</resources>

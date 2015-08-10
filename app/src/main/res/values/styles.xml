@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.NoActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--&lt;!&ndash;action bar 的颜色 (包括显示边界颜色)&ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/color_actionbar_material_dark</item>-->
+
+        <!--<item name="android:textColorPrimary">@color/white_dark</item>-->
+        <!--&lt;!&ndash;状态栏颜色&ndash;&gt;-->
+        <!--<item name="colorPrimaryDark">@color/color_actionbar_material_dark</item>-->
+
+        <!--<item name="colorAccent">@color/material_deep_teal_200</item>-->
+        <!--&lt;!&ndash;窗口颜色&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@color/background_material_dark</item>-->
+    <!--</style>-->
+
+    <style name="Style_ProgressBar_Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+        <item name="android:minHeight">3dp</item>
+        <item name="android:maxHeight">3dp</item>
+    </style>
+
+</resources>

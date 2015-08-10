@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">MaiMob</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="app_versionName">版本号:\u0020</string>
+
+
+    <string name="theme">主题</string>
+    <string name="set_usual_app">设置常用APP</string>set_app
+    <string name="set_app">设置</string>
+
+
+    <string name="title_activity_theme_activity">Theme_activity</string>
+    <string name="title_activity_my__theme_aty">My_Theme_aty</string>
+    <string name="title_activity_about__app_aty">About_App_aty</string>
+    <string name="title_activity_set__app_aty">Set_App_aty</string>
+    <string name="title_activity_set__app__style_aty">Set_App_Style_aty</string>
+    <string name="title_activity_set__usual__function_aty">Set_Usual_Function_aty</string>
+    <string name="title_activity_set__usual__app_aty">Set_Usual_App_aty</string>
+
+
+    <string name="get_app_infos">获取程序列表</string>
+    <string name="start_err">启动失败，此程序无法启动</string>
+    <string name="system_set">设置</string>
+    <string name="title_activity_update_app_info">UpdateAppInfo</string>
+    <string name="set_app_info">设置app信息</string>
+    <string name="save_set">确认保存修改</string>
+    <string name="default_set">设置为默认值</string>
+    <string name="about_app">关于</string>
+    <string name="my_theme">我的主题</string>
+    <string name="set_app_style">设置app样式</string>
+    <string name="set_usual_function">设置常用功能</string>
+
+
+    <string name="close_gprs">关闭数据流量</string>
+    <string name="open_gprs">开启数据流量</string>
+
+    <string name="open_wifi">开启wifi</string>
+    <string name="close_wifi">关闭WiFi</string>
+
+    <string name="closeing_wifi">正在关闭WiFi</string>
+    <string name="opening_wifi">正在开启wifi,请稍后</string>
+
+    <string name="closed_wifi">WiFi已关闭</string>
+    <string name="opened_wifi">WiFi已开启</string>
+
+    <string name="please_select_shortcut">请选择快捷功能</string>
+    <string name="about_appInfo">关于应用</string>
+    <string name="title_activity_app__introduction">App_Introduction</string>
+    <string name="about_app_content">这个是app应用的介绍，集杀菌的嘎三季度噶思考的规划将创新支持
+        梦想做才能走下面穿女明星中v尝试几个电话公司法，多少级风很谨慎的和圣诞节后付款交水电费。绝对是
+        福建省，第三方交水电费。</string>
+    <string name="title_activity_app__user__feedback">App_User_Feedback</string>
+    <string name="user_feedback">用户反馈</string>
+    <string name="user_feedback_submit">提交</string>
+    <string name="recommend_app">推荐应用</string>
+    <string name="my_gold">我的金币：</string>
+    <string name="get_gold">获取金币</string>
+
+
+</resources>

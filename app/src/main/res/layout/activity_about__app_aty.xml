@@ -1,0 +1,25 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hj.popwindow.activitys.About_App_aty">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d6d7d7"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/about_appInfo"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <et.maimob.com.et.view.MyListView
+        android:id="@+id/about_app_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

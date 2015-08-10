@@ -1,0 +1,105 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hj.popwindow.activitys.appset.Set_App_Style_aty">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/app_style_two_1lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="#90646768"
+            android:background="@drawable/two1"/>
+
+        <ImageView
+            android:id="@+id/app_style_two_2lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/app_style_two_1lv"
+            android:layout_below="@+id/app_style_two_1lv"
+            android:background="@drawable/two2"
+            android:src="#90646768"
+            android:scaleType="fitXY"/>
+
+        <CheckBox
+            android:id="@+id/app_style_two_1checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/app_style_two_1lv"
+            android:layout_marginRight="20dp"
+            android:checked="true"
+            android:text="启动"/>
+
+        <CheckBox
+            android:id="@+id/app_style_two_2checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/app_style_two_2lv"
+            android:layout_marginRight="20dp"
+            android:text="启动"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/app_style_nine_1lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/two1"
+            android:src="#90646768"/>
+
+        <ImageView
+            android:id="@+id/app_style_nine_2lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/app_style_nine_1lv"
+            android:layout_below="@+id/app_style_nine_1lv"
+            android:background="@drawable/two2"
+            android:scaleType="fitXY"
+            android:src="#90646768"/>
+
+        <CheckBox
+            android:id="@+id/app_style_nine_1checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/app_style_nine_1lv"
+            android:layout_marginRight="20dp"
+            android:text="启动"/>
+
+        <CheckBox
+            android:id="@+id/app_style_nine_2checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/app_style_nine_2lv"
+            android:layout_marginRight="20dp"
+            android:text="启动"/>
+    </RelativeLayout>
+
+</LinearLayout>

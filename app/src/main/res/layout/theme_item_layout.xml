@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/theme_item_ico_imv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/theme_item_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="title"/>
+
+        <TextView
+            android:id="@+id/theme_item_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/theme_item_download_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/icon_theme_free"
+            android:visibility="invisible"/>
+
+        <et.maimob.com.et.view.DownLoadingButton
+            android:id="@+id/theme_item_downloading_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/download"
+            android:visibility="invisible"
+            android:textColor="#ffffff"
+            android:text="下载中..."/>
+
+        <Button
+            android:id="@+id/theme_item_use_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/icon_theme_use"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/theme_item_used_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/icon_theme_used"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+
+</LinearLayout>

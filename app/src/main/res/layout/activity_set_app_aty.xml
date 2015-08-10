@@ -1,0 +1,56 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.hj.popwindow.activitys.Set_App_aty">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:id="@+id/set_usual_function"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/set_usual_function"
+            android:background="@drawable/icon_rt"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:id="@+id/about_app"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/icon_lt"
+            android:text="@string/about_app"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/set_app_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/set_app_style"
+            android:background="@drawable/icon_rb"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/set_usual_app_bt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/icon_lb"
+            android:text="@string/set_usual_app"/>
+    </LinearLayout>
+
+</RelativeLayout>

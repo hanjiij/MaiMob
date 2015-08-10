@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_actionbar_material_dark">#212121</color>
+    <color name="background_material_dark">#ff303030</color>
+    <color name="material_deep_teal_200">#ff80cbc4</color>
+    <color name="grey_light">#ff888888</color>
+    <color name="color_background_list_header">#ff525252</color>
+    <color name="grey_dark">#ff424242</color>
+    <color name="white_dark">#ffdcdcdc</color>
+    <color name="green_dark">#ff008b00</color>
+    <color name="blue_dark">#ff4a708b</color>
+</resources>

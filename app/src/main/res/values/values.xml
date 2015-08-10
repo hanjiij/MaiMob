@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="shortcut_values">
+        <item>wifi</item>
+        <item>流量</item>
+        <item>蓝牙</item>
+        <item>截屏</item>
+        <item>手电筒</item>
+        <item>系统设置</item>
+        <item>悬浮框的配置</item>
+        <item>个人热点</item>
+        <item>飞行模式</item>
+        <item>静音</item>
+        <item>GPS</item>
+    </string-array>
+
+    <string-array name="about_values">
+        <item>应用介绍</item>
+        <item>版本</item>
+        <item>悬浮开关</item>
+        <item>用户反馈</item>
+    </string-array>
+
+    <color name="download">#454545</color>
+    <color name="use">#74c543</color>
+    <color name="used">#74c543</color>
+    <color name="listBackground">#60b6eb</color>
+</resources>

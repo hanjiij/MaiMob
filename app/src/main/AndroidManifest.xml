@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="et.maimob.com.et"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    // 开关数据流量权限
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    // 开关wifi权限
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    // 开关蓝牙权限
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    //用于实现手电筒权限
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    // 这只为飞行模式的权限
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activitys.Theme_aty"
+            android:label="@string/title_activity_theme_activity" >
+        </activity>
+        <activity
+            android:name=".activitys.My_Theme_aty"
+            android:label="@string/title_activity_my__theme_aty" >
+        </activity>
+        <activity
+            android:name=".activitys.About_App_aty"
+            android:label="@string/title_activity_about__app_aty" >
+        </activity>
+        <activity
+            android:name=".activitys.Set_App_aty"
+            android:label="@string/title_activity_set__app_aty" >
+        </activity>
+        <activity
+            android:name=".activitys.appset.Set_Usual_App_aty"
+            android:label="@string/title_activity_set__usual__app_aty" >
+        </activity>
+        <activity
+            android:name=".activitys.appset.Set_App_Style_aty"
+            android:label="@string/title_activity_set__app__style_aty" >
+        </activity>
+        <activity
+            android:name=".activitys.appset.Set_Usual_Function_aty"
+            android:label="@string/title_activity_set__usual__function_aty" >
+        </activity>
+        <activity
+            android:name=".activitys.appabout.App_Introduction"
+            android:label="@string/title_activity_app__introduction" >
+        </activity>
+        <activity
+            android:name=".activitys.appabout.App_User_Feedback"
+            android:label="@string/title_activity_app__user__feedback" >
+        </activity>
+
+        <service android:name=".floatingwindow.floatwindow.FloatWindowService">
+
+        </service>
+
+    </application>
+
+</manifest>
