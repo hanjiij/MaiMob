@@ -30,6 +30,7 @@ public class GetAppInfo {
 
         this.context = context;
         Init();
+        //测试
     }
     /**
      * 初始化变量
