@@ -71,6 +71,8 @@ public class MainActivity
                             .getSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW) !=
                             0) {
                         FloatWindowMgr.getInstance(MainActivity.this).startFloatWindowService();
+                    }else {
+                        FloatWindowMgr.getInstance(MainActivity.this).stopFloatWindowService();
                     }
                 }
 
@@ -86,7 +88,6 @@ public class MainActivity
                 DateUtils.getSharedPreference(MainActivity.this, Config.IS_FIRST_START) == 0;
 
         if (is_first) {
-
 
             DateUtils.setSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW, 1);
 
