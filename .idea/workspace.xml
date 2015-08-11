@@ -71,42 +71,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82794b06-1302-4dc9-980d-a575a71c8918" name="Default" comment="加入江华建修改部分">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/bg_edit_search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_ppw_app.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/btn_search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_close_def.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_close_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/floatwindow/BackToSFWActionReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_style_listview_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/close_select_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/test.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/unuse.xml" />
-      <change type="DELETED" beforePath="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\src\main\java\et\maimob\com\et\floatingwindow\mainpanel\AppInfoGridView.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/bg_def_fe.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/bg_def_fe.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/floatwindow/FloatWindowMgr.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/floatwindow/FloatWindowMgr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/searchpanel/HanziToPinyin.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/searchpanel/HanziToPinyin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/activitys/My_Theme_aty.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/activitys/My_Theme_aty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/activitys/appset/Set_Usual_App_aty.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/activitys/appset/Set_Usual_App_aty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/activitys/appset/Set_Usual_Function_aty.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/activitys/appset/Set_Usual_Function_aty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/floatwindow/SmallFloatWindow.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/floatwindow/SmallFloatWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialogview_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialogview_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialogview_shortcut_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialogview_shortcut_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/float_window_big.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/float_window_big.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_app_search.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_app_search.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_float_window_big_main_panel.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_float_window_big_main_panel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_app_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_app_info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="82794b06-1302-4dc9-980d-a575a71c8918" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MaiMob.iws" />
@@ -151,8 +116,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.9307568">
-              <caret line="177" column="30" selection-start-line="177" selection-start-column="30" selection-end-line="177" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.43961352">
+              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
               <folding>
                 <element signature="e#3285#3567#0" expanded="true" />
                 <element signature="e#3566#3567#0" expanded="true" />
@@ -2124,7 +2089,13 @@
       <option name="project" value="LOCAL" />
       <updated>1439267901685</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="8.11加入江华建修改部分，添加关闭常用app，function弹窗关闭按钮">
+      <created>1439298922404</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1439298922404</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2181,7 +2152,8 @@
     <MESSAGE value="延迟软件开启时启动悬浮窗，减少开启软件等待时间&#10;(cherry picked from commit a37e67a)" />
     <MESSAGE value="加入江华建修改部分" />
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="8.11加入江华建修改部分，添加关闭常用app，function弹窗关闭按钮" />
+    <option name="LAST_COMMIT_MESSAGE" value="8.11加入江华建修改部分，添加关闭常用app，function弹窗关闭按钮" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.71236557" />
   </component>
   <component name="XDebuggerManager">
@@ -2532,8 +2504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.9307568">
-          <caret line="177" column="30" selection-start-line="177" selection-start-column="30" selection-end-line="177" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.43961352">
+          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
           <folding>
             <element signature="e#3285#3567#0" expanded="true" />
             <element signature="e#3566#3567#0" expanded="true" />
