@@ -49,6 +49,8 @@ public class MainActivity
 
         init();
 
+        // xiugai
+
         setListener();
 
         if (gotoPermissionSettings(MainActivity.this)) {
