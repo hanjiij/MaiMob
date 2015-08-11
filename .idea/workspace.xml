@@ -37,6 +37,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="82794b06-1302-4dc9-980d-a575a71c8918" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java" />
 =======
@@ -44,6 +45,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+=======
+    <list default="true" id="82794b06-1302-4dc9-980d-a575a71c8918" name="Default" comment="">
+>>>>>>> origin/xieyifan
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 >>>>>>> origin/xieyifan
     </list>
@@ -79,15 +83,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1988#1989#0" expanded="false" />
-                <element signature="e#2036#2037#0" expanded="false" />
-                <element signature="e#2101#2102#0" expanded="false" />
-                <element signature="e#2152#2153#0" expanded="false" />
-                <element signature="e#2217#2218#0" expanded="false" />
-                <element signature="e#2256#2257#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,6 +92,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/mainpanel/MainPanel.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0">
               <caret line="334" column="43" selection-start-line="334" selection-start-column="43" selection-end-line="334" selection-end-column="43" />
               <folding>
@@ -103,6 +100,9 @@
               </folding>
 =======
             <state vertical-scroll-proportion="-80.24">
+=======
+            <state vertical-scroll-proportion="0.0">
+>>>>>>> origin/xieyifan
               <caret line="299" column="45" selection-start-line="298" selection-start-column="45" selection-end-line="299" selection-end-column="45" />
               <folding />
             </state>
@@ -112,6 +112,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.3137584">
               <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
               <folding />
@@ -125,6 +126,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.19162641">
               <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+=======
+            <state vertical-scroll-proportion="0.48489934">
+              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+>>>>>>> origin/xieyifan
               <folding />
             </state>
           </provider>
@@ -135,9 +140,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1491,7 +1494,14 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="AndroidView">
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+>>>>>>> origin/xieyifan
         <subPane>
           <PATH>
             <PATH_ELEMENT>
@@ -1554,9 +1564,12 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> origin/xieyifan
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1778,7 +1791,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+>>>>>>> origin/xieyifan
+=======
 >>>>>>> origin/xieyifan
     </panes>
   </component>
@@ -2094,6 +2110,7 @@
       <option name="project" value="LOCAL" />
       <updated>1439267901685</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00014" summary="测试">
       <created>1439275828482</created>
       <option name="number" value="00014" />
@@ -2107,6 +2124,15 @@
       <updated>1439276087279</updated>
     </task>
     <option name="localTasksCounter" value="16" />
+=======
+    <task id="LOCAL-00014" summary="ceshixyf">
+      <created>1439277813186</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1439277813186</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+>>>>>>> origin/xieyifan
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2163,8 +2189,13 @@
     <MESSAGE value="延迟软件开启时启动悬浮窗，减少开启软件等待时间&#10;(cherry picked from commit a37e67a)" />
     <MESSAGE value="加入江华建修改部分" />
     <MESSAGE value="测试" />
+<<<<<<< HEAD
     <MESSAGE value="ceshi xyf" />
     <option name="LAST_COMMIT_MESSAGE" value="ceshi xyf" />
+=======
+    <MESSAGE value="ceshixyf" />
+    <option name="LAST_COMMIT_MESSAGE" value="ceshixyf" />
+>>>>>>> origin/xieyifan
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.71236557" />
   </component>
   <component name="XDebuggerManager">
@@ -2177,7 +2208,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2186,9 +2217,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+<<<<<<< HEAD
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
+=======
+          <folding />
+>>>>>>> origin/xieyifan
         </state>
       </provider>
     </entry>
@@ -2196,15 +2231,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1988#1989#0" expanded="false" />
-            <element signature="e#2036#2037#0" expanded="false" />
-            <element signature="e#2101#2102#0" expanded="false" />
-            <element signature="e#2152#2153#0" expanded="false" />
-            <element signature="e#2217#2218#0" expanded="false" />
-            <element signature="e#2256#2257#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2212,9 +2239,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2222,7 +2247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2495,7 +2519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19162641">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2543,7 +2566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19162641">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2551,9 +2573,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2568,20 +2588,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1988#1989#0" expanded="false" />
-            <element signature="e#2036#2037#0" expanded="false" />
-            <element signature="e#2101#2102#0" expanded="false" />
-            <element signature="e#2152#2153#0" expanded="false" />
-            <element signature="e#2217#2218#0" expanded="false" />
-            <element signature="e#2256#2257#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/floatingwindow/mainpanel/MainPanel.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="334" column="43" selection-start-line="334" selection-start-column="43" selection-end-line="334" selection-end-column="43" />
@@ -2590,6 +2603,9 @@
           </folding>
 =======
         <state vertical-scroll-proportion="-80.24">
+=======
+        <state vertical-scroll-proportion="0.0">
+>>>>>>> origin/xieyifan
           <caret line="299" column="45" selection-start-line="298" selection-start-column="45" selection-end-line="299" selection-end-column="45" />
           <folding />
         </state>
@@ -2597,6 +2613,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/et/maimob/com/et/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.3137584">
           <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
           <folding />
@@ -2608,6 +2625,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19162641">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.48489934">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+>>>>>>> origin/xieyifan
           <folding />
         </state>
       </provider>
