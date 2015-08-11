@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,7 @@ public class Set_Usual_Function_aty
     private List<FunctionInfo> shortcut_select_list;
     private View shortcut_select_view;  // 选择功能弹出框视图
     private int selectShortCutPosition = 0;  // 判断点击的是第几个快捷键
+    private ImageView close_function_dialog;
 
     private String functionstr = "function_";
 
@@ -48,14 +50,6 @@ public class Set_Usual_Function_aty
 
         default_functionInfo =
                 new FunctionInfo(-1, "", getResources().getDrawable(R.drawable.icon_add));
-
-        //初始化常用功能，当数据库中为空，则初始化四个功能进入面板
-        if (DateUtils.getFunctions(Set_Usual_Function_aty.this).size() == 0) {
-
-            for (int i = 0; i < 4; i++) {
-                DateUtils.upDateFunc(Set_Usual_Function_aty.this, i + 1, i);
-            }
-        }
 
         initShortCut();
 
@@ -84,6 +78,14 @@ public class Set_Usual_Function_aty
                 shortcut_select_list.remove(position);
                 shortcut_select_adapter.NotifyDataSetChanged(shortcut_select_list);
 
+                shortcut_select_dialog.cancel();
+            }
+        });
+
+        close_function_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("============");
                 shortcut_select_dialog.cancel();
             }
         });
@@ -165,6 +167,7 @@ public class Set_Usual_Function_aty
         shortcut_select_gridview =
                 (MyGridView) shortcut_select_view.findViewById(R.id.app_info_gridveiw_dialog);
 
+        close_function_dialog= (ImageView) shortcut_select_view.findViewById(R.id.close_dialog_function);
 
         shortcut_select_list = new ArrayList<>();
 
@@ -182,11 +185,24 @@ public class Set_Usual_Function_aty
 
         setShortCutSelectDatas();
 
-        shortcut_select_dialog.setView(shortcut_select_view);
+//        shortcut_select_dialog.setView(shortcut_select_view);
 
-        shortcut_select_dialog.setTitle(getResources().getString(R.string.please_select_shortcut));
+//        shortcut_select_dialog.setTitle(getResources().getString(R.string.please_select_shortcut));
 
         shortcut_select_dialog.show();
+
+        shortcut_select_dialog.getWindow().setContentView(shortcut_select_view);
+
+//        DisplayMetrics windowManager = getResources().getDisplayMetrics();
+//
+//        int w = windowManager.widthPixels;
+//        int h = windowManager.heightPixels;
+//
+//        WindowManager.LayoutParams params = shortcut_select_dialog.getWindow().getAttributes();
+//        params.width = (int) (w * (7.0 / 8));  // 800
+//        params.height = (int) (h * (1.5 / 4));  // 1280
+//        shortcut_select_dialog.getWindow().setAttributes(params);
+
     }
 
 

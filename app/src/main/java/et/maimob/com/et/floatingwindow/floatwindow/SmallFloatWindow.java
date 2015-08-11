@@ -1,6 +1,11 @@
 package et.maimob.com.et.floatingwindow.floatwindow;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
 import android.util.Log;
 import android.view.Gravity;
@@ -23,7 +28,7 @@ import et.maimob.com.et.R;
  * 当前显示百分比
  * TODO 是否要另起刷新线程刷新小悬浮窗的剩余内存百分比
  */
-public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListener {
+public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListener ,View.OnLongClickListener{
     private static final String TAG = "SmallFloatWindow";
     private boolean isShowing;
     private boolean isFirstShow;
@@ -60,6 +65,7 @@ public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListe
         mSmallFloatView = rootView.findViewById(R.id.floatView_small);
         mSmallFloatView.setOnTouchListener(this);
         mSmallFloatView.setOnClickListener(this);
+        mSmallFloatView.setOnLongClickListener(this);
 
         rootView.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
                          View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
@@ -207,6 +213,43 @@ public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListe
 
     public void stopRefreshUsedMemTask() {
         isRefreshUsedMem = false;
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+        Log.e(TAG,"Small FloatingWindow onLongClick");
+        moveSmallFloatToNotification();
+        return true;
+    }
+
+    private void moveSmallFloatToNotification() {
+
+        FloatWindowMgr.getInstance(mAppContext).removeShowingFloatWindow();
+
+        NotificationManager notificationManager= (NotificationManager) mAppContext.getSystemService(Context
+
+
+                .NOTIFICATION_SERVICE);
+        Intent intent=new Intent(mAppContext,BackToSFWActionReceiver.class);
+
+        intent.setAction(BackToSFWActionReceiver.ACTION_BACKTOSFWINTENT);
+
+        PendingIntent pendingIntent=PendingIntent.getBroadcast(mAppContext,1,intent,PendingIntent
+                .FLAG_UPDATE_CURRENT);
+        Notification notification =
+                new Notification.Builder(mAppContext).setSmallIcon(R.mipmap.ic_launcher)
+                                                     .setContentTitle("Small FloatingWindow")
+                                                     .setContentText("click back to Small " +
+                                                                     "FloatingWindow")
+                                                     .setAutoCancel(true).setLargeIcon(BitmapFactory
+                                                                                               .decodeResource(
+                                                                                                       mAppContext
+                                                                                                               .getResources(),
+                                                                                                       R.mipmap.ic_launcher))
+                                                     .setContentIntent(pendingIntent).build();
+
+        notificationManager.notify(1,notification);
+
     }
 
     private class RefreshUsedMemTask extends Thread {

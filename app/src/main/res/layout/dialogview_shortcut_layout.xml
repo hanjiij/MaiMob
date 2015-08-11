@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-              android:orientation="vertical"
-    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/bg_ppw_app">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/close_dialog_function"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/close_select_button"/>
+    </RelativeLayout>
 
     <et.maimob.com.et.view.MyGridView
         android:id="@+id/app_info_gridveiw_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numColumns="4" />
-</LinearLayout>
+        android:numColumns="4"
+        android:padding="30dp"/>
+
+</FrameLayout>

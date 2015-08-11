@@ -115,7 +115,7 @@ public class FloatWindowMgr {
     }
 
     /**
-     * 移除正在显示的大悬浮窗
+     * 移除正在显示的悬浮窗
      */
     public void removeShowingFloatWindow() {
         mSmallFloatWindow.removeSmallFloatWindow();

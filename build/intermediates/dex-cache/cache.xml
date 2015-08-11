@@ -23,6 +23,13 @@
         <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\AndroidScreenCap-d9fe137df46ffc2fc8326fc54bc77a7b151d4688.jar" />
     </item>
     <item
+        jar="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\classes-d1892d606d236872652c723c3ef4df827fb945e3.jar" />
+    </item>
+    <item
         jar="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\libs\pinyin4j-2.5.0.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -35,13 +42,6 @@
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
         <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\classes-4c72a0c64681be172e816c2169ebc6d3721e4c2e.jar" />
-    </item>
-    <item
-        jar="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\classes-d1892d606d236872652c723c3ef4df827fb945e3.jar" />
     </item>
 
 </items>

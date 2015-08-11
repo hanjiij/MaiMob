@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -23,7 +25,6 @@ import et.maimob.com.et.adapter.MyAppInfoAdapter;
 import et.maimob.com.et.database.data.DateUtils;
 import et.maimob.com.et.datatype.AppInfo;
 import et.maimob.com.et.util.GetAppInfo;
-import et.maimob.com.et.util.Util_MyDataBase;
 import et.maimob.com.et.view.MyGridView;
 
 public class Set_Usual_App_aty
@@ -40,7 +41,9 @@ public class Set_Usual_App_aty
     private MyAppInfoAdapter myAppInfoDialogAdapter;  //弹出框列表适配器
     private List<AppInfo> appInfoDialogList;  // 弹出框程序信息列表
     private AlertDialog app_GridView_Dialog;  //弹出框
-    private View dialogView; //弹出框的视图
+    private FrameLayout dialogView; //弹出框的视图
+
+    private ImageView close_app_dialog;
 
     private AppInfo default_app_info;   // 最后加号为默认程序信息
 
@@ -109,9 +112,10 @@ public class Set_Usual_App_aty
 
         //弹出框界面的初始化信息
         app_GridView_Dialog = new AlertDialog.Builder(Set_Usual_App_aty.this).create();
-        dialogView = LayoutInflater.from(Set_Usual_App_aty.this).inflate(R.layout.dialogview_layout,
+        dialogView = (FrameLayout) LayoutInflater.from(Set_Usual_App_aty.this).inflate(R.layout.dialogview_layout,
                 null);
         appsDialogGridView = (GridView) dialogView.findViewById(R.id.app_info_gridveiw_dialog);
+        close_app_dialog= (ImageView) dialogView.findViewById(R.id.close_dialog);
         appInfoDialogList = new ArrayList<>();
         myAppInfoDialogAdapter =
                 new MyAppInfoAdapter(Set_Usual_App_aty.this, appInfoDialogList, null, true);
@@ -196,6 +200,15 @@ public class Set_Usual_App_aty
 //                        app_GridView_Dialog.cancel();
                     }
                 });
+
+
+        close_app_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                app_GridView_Dialog.cancel();
+            }
+        });
 
         usual_App_Info_GridView
                 .setOnItemClickListener(new AdapterView.OnItemClickListener() {  // 程序选择按钮监听
@@ -347,7 +360,7 @@ public class Set_Usual_App_aty
      */
     public void setDialog() {
 
-        app_GridView_Dialog.setView(dialogView);
+//        app_GridView_Dialog.setView(dialogView);
 
         if (appInfoDialogList.size() == 0) {  // 若数据为空，则获取数据
             setAppsListData();
@@ -355,9 +368,9 @@ public class Set_Usual_App_aty
 
         myAppInfoDialogAdapter.NotifyDataSetChanged(appInfoDialogList);
 
-        app_GridView_Dialog.setTitle("选择");
-
         app_GridView_Dialog.show();
+
+        app_GridView_Dialog.getWindow().setContentView(dialogView);
 
         DisplayMetrics windowManager = getResources().getDisplayMetrics();
 
@@ -462,6 +475,5 @@ public class Set_Usual_App_aty
     protected void onPause() {
         super.onPause();
 
-        Util_MyDataBase.CloseSqlDataBase();  // 关闭数据库
     }
 }

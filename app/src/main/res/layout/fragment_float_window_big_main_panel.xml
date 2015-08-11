@@ -19,7 +19,7 @@
             android:gravity="center"
             android:layout_marginTop="60dp"
             android:numColumns="4"
-            android:verticalSpacing="10dp"
+            android:verticalSpacing="15dp"
             android:stretchMode="columnWidth"/>
 
         <GridView
@@ -29,6 +29,7 @@
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:numColumns="4"
+            android:layout_marginBottom="30dp"
             android:stretchMode="columnWidth"/>
 
     </RelativeLayout>
@@ -43,8 +44,8 @@
 
     <et.maimob.com.et.floatingwindow.mainpanel.AnimationView
         android:id="@+id/circle"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_gravity="center_horizontal|top"
         android:clickable="true" />
 

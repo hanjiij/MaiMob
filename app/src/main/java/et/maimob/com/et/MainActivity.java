@@ -71,7 +71,7 @@ public class MainActivity
                             .getSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW) !=
                             0) {
                         FloatWindowMgr.getInstance(MainActivity.this).startFloatWindowService();
-                    }else {
+                    } else {
                         FloatWindowMgr.getInstance(MainActivity.this).stopFloatWindowService();
                     }
                 }
@@ -92,6 +92,8 @@ public class MainActivity
             DateUtils.setSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW, 1);
 
             MAPP.setStyleInfo(MainActivity.this, 1);
+
+            DateUtils.setSharedPreference(MainActivity.this, Config.IS_TWO_OPEN, 1);
 
             DateUtils.setallfun(MainActivity.this);
 
@@ -123,6 +125,11 @@ public class MainActivity
 //                Util_MyDataBase.InsertDataBase(Set_Usual_App_aty.this, appInfo);// 向数据库中插入数据
 
                 DateUtils.insertApp(MainActivity.this, i + 1, appInfo);
+            }
+
+            // 初始化常用功能，默认添加前四个
+            for (int i = 0; i < 4; i++) {
+                DateUtils.upDateFunc(MainActivity.this, i + 1, i);
             }
 
             DateUtils.setSharedPreference(MainActivity.this, Config.IS_FIRST_START, 1);

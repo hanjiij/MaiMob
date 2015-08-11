@@ -4,4 +4,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="drawable_clear_width">20dp</dimen>
     <dimen name="drawable_clear_height">20dp</dimen>
+    <dimen name="gridView_app_topMargin_1_style">90dp</dimen>
+    <dimen name="gridView_app_topMargin_2_style">30dp</dimen>
+    <dimen name="gridView_app_vertical_spacing_1_style">30dp</dimen>
+    <dimen name="gridView_app_vertical_spacing_2_style">30dp</dimen>
 </resources>

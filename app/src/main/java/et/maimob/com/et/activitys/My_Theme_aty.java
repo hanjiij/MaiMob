@@ -23,8 +23,6 @@ public class My_Theme_aty
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my__theme_aty);
 
-
-        //测试
         init();
 
         setListener();
