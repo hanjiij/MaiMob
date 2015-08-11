@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -35,6 +37,7 @@ public class MainActivity
 
 
     private LinearLayout theme_set_bt, app_set_bt, my_theme_set_bt, about_app_bt;
+    private Handler handler;  // 延迟启动悬浮窗，防止开启软解等待时间长
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,30 @@ public class MainActivity
         if (gotoPermissionSettings(MainActivity.this)) {
             Toast.makeText(MainActivity.this, "请打开悬浮窗权限", Toast.LENGTH_SHORT).show();
         }
+
+        inithandler();
     }
+
+    private void inithandler() {
+
+        handler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+
+                if (msg.what == 1) {
+
+                    if (DateUtils
+                            .getSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW) !=
+                            0) {
+                        FloatWindowMgr.getInstance(MainActivity.this).startFloatWindowService();
+                    }
+                }
+
+            }
+        };
+    }
+
 
     private void InitDataBase() {
 
@@ -64,10 +90,6 @@ public class MainActivity
 
             DateUtils.setSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW, 1);
 
-//            new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-
             MAPP.setStyleInfo(MainActivity.this, 1);
 
             DateUtils.setallfun(MainActivity.this);
@@ -76,7 +98,7 @@ public class MainActivity
             // 判断是否为第一次打开软件，若是则向表中添加最近使用的app
             List<AppInfo> recentlyListInfo = GetAppInfo.Get_Recently_App_Info(MainActivity.this);
 
-            if (recentlyListInfo.size()==0) {
+            if (recentlyListInfo.size() == 0) {
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
 
@@ -102,11 +124,45 @@ public class MainActivity
                 DateUtils.insertApp(MainActivity.this, i + 1, appInfo);
             }
 
-//                }
-//            }).start();
-
             DateUtils.setSharedPreference(MainActivity.this, Config.IS_FIRST_START, 1);
         }
+    }
+
+
+    private void init() {
+
+        theme_set_bt = (LinearLayout) findViewById(R.id.theme_set_bt);
+        app_set_bt = (LinearLayout) findViewById(R.id.app_set_bt);
+        my_theme_set_bt = (LinearLayout) findViewById(R.id.My_theme_set_bt);
+        about_app_bt = (LinearLayout) findViewById(R.id.about_app);
+
+        /*if (DateUtils.getSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW) != 0) {
+
+//            FloatWindowMgr.getInstance(MainActivity.this)
+//                    .stopFloatWindowService();
+            FloatWindowMgr.getInstance(MainActivity.this)
+                    .startFloatWindowService();
+        }*//*else {
+
+            FloatWindowMgr.getInstance(MainActivity.this)
+                    .startFloatWindowService();
+        }*/
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(200);
+                    Message message = new Message();
+                    message.what = 1;
+                    handler.sendMessage(message);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     private void setListener() {
@@ -144,26 +200,6 @@ public class MainActivity
         });
     }
 
-    private void init() {
-
-        theme_set_bt = (LinearLayout) findViewById(R.id.theme_set_bt);
-        app_set_bt = (LinearLayout) findViewById(R.id.app_set_bt);
-        my_theme_set_bt = (LinearLayout) findViewById(R.id.My_theme_set_bt);
-        about_app_bt = (LinearLayout) findViewById(R.id.about_app);
-
-        if (DateUtils.getSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW) != 0) {
-
-//            FloatWindowMgr.getInstance(MainActivity.this)
-//                    .stopFloatWindowService();
-            FloatWindowMgr.getInstance(MainActivity.this)
-                    .startFloatWindowService();
-        }/*else {
-
-            FloatWindowMgr.getInstance(MainActivity.this)
-                    .startFloatWindowService();
-        }*/
-    }
-
 
     /**
      * @param context 传入app 或者 activity context，通过context获取应用packegename，之后通过packegename跳转制定应用
@@ -172,22 +208,23 @@ public class MainActivity
     public static boolean gotoPermissionSettings(Context context) {
         String miui = getSystemProperty();
         boolean isMiui = false;
-        if ( miui.equals("V6") ) {
+        if (miui.equals("V6")) {
             Intent intent = new Intent("miui.intent.action.APP_PERM_EDITOR");
             try {
-                intent.setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
+                intent.setClassName("com.miui.securitycenter",
+                        "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
                 intent.putExtra("extra_pkgname", context.getPackageName());
                 context.startActivity(intent);
             } catch (ActivityNotFoundException e) {
             }
             isMiui = true;
-        }else if (miui.equals("V5")) {
+        } else if (miui.equals("V5")) {
             Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-            Uri uri = Uri.fromParts("package", context.getPackageName(),null);
+            Uri uri = Uri.fromParts("package", context.getPackageName(), null);
             intent.setData(uri);
             context.startActivity(intent);
             isMiui = true;
-        }else {
+        } else {
             isMiui = false;
         }
         return isMiui;
@@ -197,7 +234,7 @@ public class MainActivity
         String line = null;
         BufferedReader reader = null;
         try {
-            Process p = Runtime.getRuntime().exec("getprop ro.miui.ui.version.name" );
+            Process p = Runtime.getRuntime().exec("getprop ro.miui.ui.version.name");
             reader = new BufferedReader(new InputStreamReader(p.getInputStream()), 1024);
             line = reader.readLine();
             return line;
