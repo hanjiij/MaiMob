@@ -22,8 +22,8 @@
         <item>用户反馈</item>
     </string-array>
 
-    <color name="download">#454545</color>
-    <color name="use">#74c543</color>
+    <color name="download">#b6b6b6</color>
+    <color name="use">#5699de</color>
     <color name="used">#74c543</color>
     <color name="listBackground">#60b6eb</color>
 </resources>
