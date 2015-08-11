@@ -35,7 +35,7 @@ import et.maimob.com.et.util.GetAppInfo;
 public class MainActivity
         extends ActionBarActivity {
 
-
+//ceshi  xyf
     private LinearLayout theme_set_bt, app_set_bt, my_theme_set_bt, about_app_bt;
     private Handler handler;  // 延迟启动悬浮窗，防止开启软解等待时间长
 
