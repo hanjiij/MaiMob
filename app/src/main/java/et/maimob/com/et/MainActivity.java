@@ -50,6 +50,7 @@ public class MainActivity
         init();
 
         // xiugai
+        // 测试hanji
 
         setListener();
 
