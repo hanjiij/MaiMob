@@ -1,6 +1,5 @@
 package et.maimob.com.et.floatingwindow.searchpanel;
 
-import android.annotation.TargetApi;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
@@ -9,8 +8,7 @@ import android.content.pm.IPackageStatsObserver;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageStats;
-import android.net.Uri;
-import android.os.Build;
+import android.os.AsyncTask;
 import android.os.RemoteException;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -153,19 +151,8 @@ public class AppSearchPanel {
         List<PackageInfo> packageInfos = mAppContext.getPackageManager().getInstalledPackages(
                 PackageManager.COMPONENT_ENABLED_STATE_DEFAULT);
         mAppInfos.clear();
-        for (PackageInfo packageInfo : packageInfos) {
-            
-            AppInfo appInfo = new AppInfo();
-            appInfo.setAppIcon(packageInfo.applicationInfo.loadIcon(mPm));
-            appInfo.setAppName(packageInfo.applicationInfo.loadLabel(mPm).toString());
-            appInfo.setAppVersionName(packageInfo.versionName);
-            appInfo.setAppVersionCode(packageInfo.versionCode);
-            appInfo.setAppPkgName(packageInfo.packageName);
-            appInfo.setAppLaunchIntent(mPm.getLaunchIntentForPackage(packageInfo.packageName));
-            setAppPkgSizeInfo(packageInfo.packageName, appInfo);
-            mAppInfos.add(appInfo);
-        }
-        //new GetAppPkgStatsTask().execute(mAppInfos);
+
+        new GetAppPkgStatsTask().execute(packageInfos);
     }
 
     public View getView() {
@@ -214,14 +201,15 @@ public class AppSearchPanel {
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount,
                                  int totalItemCount)
             {
-                Log.e(TAG,"*************onScroll*******************");
+                Log.e(TAG, "*************onScroll*******************");
+                if (filterAdapter!=null) {
+                    filterAdapter.setVisibleItemIndex(firstVisibleItem,firstVisibleItem+visibleItemCount-1);
 
-                filterAdapter.setVisibleItemIndex(firstVisibleItem,firstVisibleItem+visibleItemCount-1);
-
-                if (filterAdapter.isNeedRefreshItemVisible(firstVisibleItem,
-                                                           firstVisibleItem+visibleItemCount-1)) {
-                    Log.e(TAG,"onScroll************NeedRefreshItem**********");
-                    filterAdapter.refreshSpecifiedItem();
+                    if (filterAdapter.isNeedRefreshItemVisible(firstVisibleItem,
+                                                               firstVisibleItem+visibleItemCount-1)) {
+                        Log.e(TAG,"onScroll************NeedRefreshItem**********");
+                        filterAdapter.refreshSpecifiedItem();
+                    }
                 }
 //                 Log.e(TAG,"firstVisibleItem---->"+firstVisibleItem+
 //                      " , visibleItemCount--------->"+visibleItemCount
@@ -229,25 +217,28 @@ public class AppSearchPanel {
             }
         });
 
-        btn_app_search = (Button) root.findViewById(R.id.btn_app_search);
-        btn_app_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //                searchSpecifiedConstraint(et_app_search.getText().toString().trim());
-                //                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri
-                        .parse("http://www.baidu.com/s?wd=" +
-                               Uri.encode(et_app_search.getText().toString())));
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                mAppContext.startActivity(intent);
-                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                FloatWindowMgr.getInstance(mAppContext).backToSmallFloatWindow();
-            }
-        });
+//        btn_app_search = (Button) root.findViewById(R.id.btn_app_search);
+//        btn_app_search.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                searchOnWeb(mAppContext,v,et_app_search.getText().toString());
+//            }
+//        });
         return root;
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
+//    public static void searchOnWeb(Context context,View v,String s) {
+//        InputMethodManager imm=(InputMethodManager) context.getSystemService(Context
+//                                                                                     .INPUT_METHOD_SERVICE);
+//        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
+//                "http://www.baidu.com/s?wd=" +
+//                Uri.encode(s)));
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        context.startActivity(intent);
+//        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+//        FloatWindowMgr.getInstance(context).backToSmallFloatWindow();
+//    }
+
     private void setAppPkgSizeInfo(String pkgName, AppInfo appInfo) {
         if (!TextUtils.isEmpty(pkgName)) {
             //使用反射机制得到PackageManager类的隐藏函数getPackageSizeInfo
@@ -296,19 +287,29 @@ public class AppSearchPanel {
         }
     }
 
-    //    private class GetAppPkgStatsTask extends AsyncTask<List<AppInfo>,Void,Void>{
-    //
-    //        @Override
-    //        protected Void doInBackground(List<AppInfo>... params) {
-    //            for (AppInfo appInfo : params[0]) {
-    //                setAppPkgSizeInfo(appInfo.getAppPkgName(),appInfo);
-    //            }
-    //            return null;
-    //        }
-    //
-    //        @Override
-    //        protected void onPostExecute(Void aVoid) {
-    //            super.onPostExecute(aVoid);
-    //        }
-    //    }
+        private class GetAppPkgStatsTask extends AsyncTask<List<PackageInfo>,Void,Void> {
+            @Override
+            protected Void doInBackground(List<PackageInfo>... params) {
+                PackageManager mPm = mAppContext.getPackageManager();
+                    for (PackageInfo packageInfo : params[0]) {
+                        AppInfo appInfo = new AppInfo();
+                        appInfo.setAppIcon(packageInfo.applicationInfo.loadIcon(mPm));
+                        appInfo.setAppName(packageInfo.applicationInfo.loadLabel(mPm).toString());
+                        appInfo.setAppVersionName(packageInfo.versionName);
+                        appInfo.setAppVersionCode(packageInfo.versionCode);
+                        appInfo.setAppPkgName(packageInfo.packageName);
+                        appInfo.setAppLaunchIntent(mPm.getLaunchIntentForPackage(packageInfo.packageName));
+                        setAppPkgSizeInfo(packageInfo.packageName, appInfo);
+                        mAppInfos.add(appInfo);
+                    }
+                Log.e(TAG,"size----------->"+mAppInfos.size());
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                ((AppFilterAdapter.AppFilter)((AppFilterAdapter)lv_filtered_app.getAdapter())
+                        .getFilter()).setValues(mAppInfos);
+            }
+        }
 }

@@ -172,7 +172,7 @@ public class BigFloatWindow implements View.OnTouchListener {
      */
     public void removeBigFloatWindow() {
         if (isShowing && mWindowManager != null && rootView != null) {
-            mWindowManager.removeView(rootView);
+            mWindowManager.removeViewImmediate(rootView);
             //           sBigFloatWindow = null;
             isShowing = false;
             //isChangeLayout = false;

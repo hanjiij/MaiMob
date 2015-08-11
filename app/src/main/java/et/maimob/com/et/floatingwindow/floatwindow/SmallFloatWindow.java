@@ -145,7 +145,7 @@ public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListe
      */
     public void removeSmallFloatWindow() {
         if (isShowing && mWindowManager != null && rootView != null) {
-            mWindowManager.removeView(rootView);
+            mWindowManager.removeViewImmediate(rootView);
             isShowing = false;
         }
     }

@@ -11,36 +11,15 @@
         android:padding="8dp"
         android:background="#bb000000">
 
-        <Button
-            android:id="@+id/btn_test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:visibility="gone"
-            android:text="变"/>
-
-        <Button
-            android:id="@+id/btn_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:visibility="gone"
-            android:text="clear"/>
-        <Button
-            android:id="@+id/btn_appear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:visibility="gone"
-            android:text="appear"/>
-
         <GridView
             android:id="@+id/gv_app"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
+            android:gravity="center"
             android:layout_marginTop="60dp"
             android:numColumns="4"
+            android:verticalSpacing="10dp"
             android:stretchMode="columnWidth"/>
 
         <GridView
@@ -48,9 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:gravity="center"
             android:numColumns="4"
             android:stretchMode="columnWidth"/>
-
 
     </RelativeLayout>
 
@@ -59,7 +38,16 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal|top"
+        android:visibility="gone"
         android:src="@drawable/detail_comment_portrait_manual"/>
+
+    <et.maimob.com.et.floatingwindow.mainpanel.AnimationView
+        android:id="@+id/circle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal|top"
+        android:clickable="true" />
+
 
 </FrameLayout>
 

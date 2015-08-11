@@ -144,6 +144,7 @@ public class AppFilterAdapter extends ArrayAdapter<AppInfo>
                 mAppContext.getString(R.string.app_versionName) + appInfo.getAppVersionName());
 
         TextView tv_app_size = (TextView) convertView.findViewById(R.id.tv_app_size);
+        //setAppPkgSizeInfo(appInfo.getAppPkgName(),appInfo);
         tv_app_size.setText(Formatter.formatFileSize(mAppContext, appInfo.getAppPkgSize()));
 
         ImageView imgView_app_state = (ImageView) convertView.findViewById(R.id.imgView_app_state);
@@ -169,6 +170,54 @@ public class AppFilterAdapter extends ArrayAdapter<AppInfo>
         //              "Position--------->" + position + " , ProgressBarId--------->" + pb_download.getId());
         return convertView;
     }
+
+//    private void setAppPkgSizeInfo(String pkgName, AppInfo appInfo) {
+//        if (!TextUtils.isEmpty(pkgName)) {
+//            //使用反射机制得到PackageManager类的隐藏函数getPackageSizeInfo
+//            PackageManager pm = mAppContext.getPackageManager();
+//            try {
+//                Method getAppPkgSizeInfoMethod = pm.getClass()
+//                                                   .getMethod("getPackageSizeInfo", String.class,
+//                                                              IPackageStatsObserver.class);
+//                getAppPkgSizeInfoMethod.setAccessible(true);
+//                getAppPkgSizeInfoMethod.invoke(pm, pkgName, new AppPkgSizeObserver(appInfo));
+//            } catch (Exception e) {
+//                Log.e(TAG, "**************error!!! NoSuchMethodException***************");
+//                Log.e(TAG, e.getMessage());
+//            }
+//        }
+//    }
+//
+//    /**
+//     * 监听App包大小，调用安卓远程服务获取
+//     */
+//    private class AppPkgSizeObserver extends IPackageStatsObserver.Stub {
+//
+//        private AppInfo appInfo;
+//
+//        public AppPkgSizeObserver(AppInfo appInfo) {
+//            this.appInfo = appInfo;
+//        }
+//
+//        @Override
+//        public void onGetStatsCompleted(PackageStats pStats, boolean succeeded)
+//                throws RemoteException
+//        {
+//            appInfo.setAppCodeSize(pStats.codeSize);
+//            appInfo.setAppDataSize(pStats.dataSize);
+//            appInfo.setAppCacheSize(pStats.cacheSize);
+//            appInfo.setAppTotalSize(pStats.codeSize + pStats.dataSize + pStats.cacheSize);
+//            appInfo.setAppPkgSize(pStats.codeSize + pStats.dataSize + pStats.cacheSize);
+//
+//            Log.i(TAG, "codeSize---->" +
+//                       Formatter.formatFileSize(mAppContext, pStats.codeSize) +
+//                       "  , dataSize---->" +
+//                       Formatter.formatFileSize(mAppContext, pStats.dataSize)
+//
+//                       + "  ,  cacheSize---->" +
+//                       Formatter.formatFileSize(mAppContext, pStats.cacheSize));
+//        }
+//    }
 
     public void setVisibleItemIndex(int firstVisibleItem, int lastVisibleItem) {
         this.firstVisibleItem = firstVisibleItem;
@@ -399,7 +448,7 @@ public class AppFilterAdapter extends ArrayAdapter<AppInfo>
      * 模糊过滤器
      * 通过一些过滤规则来过滤App
      */
-    private class AppFilter extends Filter {
+    public class AppFilter extends Filter {
 
         /**
          * 原先的App数据
@@ -408,6 +457,11 @@ public class AppFilterAdapter extends ArrayAdapter<AppInfo>
 
         public AppFilter() {
             mOriginalValues = new ArrayList<AppInfo>(mFilteredApps);
+        }
+
+        public void setValues(List<AppInfo> appInfos){
+            mOriginalValues.clear();
+            mOriginalValues.addAll(appInfos);
         }
 
         @Override
