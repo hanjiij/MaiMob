@@ -24,6 +24,7 @@ public class My_Theme_aty
         setContentView(R.layout.activity_my__theme_aty);
 
 
+        //测试
         init();
 
         setListener();

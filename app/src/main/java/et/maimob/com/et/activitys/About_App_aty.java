@@ -35,6 +35,7 @@ public class About_App_aty
 
         init();
         setListener();
+        //测试
     }
 
     /**
