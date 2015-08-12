@@ -4,6 +4,14 @@
              android:layout_height="match_parent"
              android:background="@drawable/bg_ppw_app">
 
+    <et.maimob.com.et.view.MyGridView
+        android:id="@+id/app_info_gridveiw_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:padding="30dp"/>
+
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -17,12 +25,4 @@
             android:layout_alignParentTop="true"
             android:src="@drawable/close_select_button"/>
     </RelativeLayout>
-
-    <et.maimob.com.et.view.MyGridView
-        android:id="@+id/app_info_gridveiw_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numColumns="4"
-        android:padding="30dp"/>
-
 </FrameLayout>

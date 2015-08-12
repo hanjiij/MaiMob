@@ -6,6 +6,14 @@
     android:orientation="vertical"
     tools:context="com.hj.popwindow.activitys.appset.Set_App_Style_aty">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@drawable/bg_def_title"
+        android:gravity="center_horizontal"
+        android:text="@string/set_app_style"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

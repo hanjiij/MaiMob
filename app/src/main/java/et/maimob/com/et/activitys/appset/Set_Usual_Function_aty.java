@@ -53,44 +53,9 @@ public class Set_Usual_Function_aty
 
         initShortCut();
 
-        usual_function_gridveiw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        setListener();
 
-                setDialog();
-                selectShortCutPosition = position;
-            }
-        });
-
-        shortcut_select_gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-//                editor.putInt(functionstr + selectShortCutPosition,
-//                        shortcut_select_list.get(position).getId());
-//                editor.commit();
-
-                DateUtils.upDateFunc(Set_Usual_Function_aty.this, selectShortCutPosition + 1,
-                        shortcut_select_list.get(position).getId());
-
-                setFunctionDatas();
-
-                shortcut_select_list.remove(position);
-                shortcut_select_adapter.NotifyDataSetChanged(shortcut_select_list);
-
-                shortcut_select_dialog.cancel();
-            }
-        });
-
-        close_function_dialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("============");
-                shortcut_select_dialog.cancel();
-            }
-        });
-
-
+        // 判断是否开启了常用功能，未开启则提示是否开启，确定开启，取消返回上一级
         if (DateUtils.getconfig(Set_Usual_Function_aty.this, MHelper.TYPE_FUNCTIONISOPEN) == 0) {
 
             AlertDialog.Builder alert = new AlertDialog.Builder(Set_Usual_Function_aty.this);
@@ -128,6 +93,51 @@ public class Set_Usual_Function_aty
     }
 
     /**
+     * 设置监听
+     */
+    private void setListener() {
+
+        usual_function_gridveiw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                setDialog();
+                selectShortCutPosition = position;
+            }
+        });
+
+        shortcut_select_gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+//                editor.putInt(functionstr + selectShortCutPosition,
+//                        shortcut_select_list.get(position).getId());
+//                editor.commit();
+
+                DateUtils.upDateFunc(Set_Usual_Function_aty.this, selectShortCutPosition + 1,
+                        shortcut_select_list.get(position).getId());
+
+                setFunctionDatas();
+
+                shortcut_select_list.remove(position);
+                shortcut_select_adapter.NotifyDataSetChanged(shortcut_select_list);
+
+                shortcut_select_dialog.cancel();
+            }
+        });
+
+        System.out.println(">>>>>>>>"+"设置监听");
+        close_function_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("============");
+                shortcut_select_dialog.cancel();
+            }
+        });
+
+    }
+
+    /**
      * 初始化快捷功能
      */
     private void initShortCut() {
@@ -154,11 +164,9 @@ public class Set_Usual_Function_aty
 
         usual_function_gridveiw.setAdapter(myUsualFunctionAdapter);
 
-
         setFunctionDatas();   // 设置更新数据
 
         // 弹出框部分
-
         shortcut_select_dialog = new AlertDialog.Builder(Set_Usual_Function_aty.this).create();
 
         shortcut_select_view =
@@ -167,7 +175,8 @@ public class Set_Usual_Function_aty
         shortcut_select_gridview =
                 (MyGridView) shortcut_select_view.findViewById(R.id.app_info_gridveiw_dialog);
 
-        close_function_dialog= (ImageView) shortcut_select_view.findViewById(R.id.close_dialog_function);
+        close_function_dialog =
+                (ImageView) shortcut_select_view.findViewById(R.id.close_dialog_function);
 
         shortcut_select_list = new ArrayList<>();
 

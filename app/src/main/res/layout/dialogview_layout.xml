@@ -4,34 +4,19 @@
              android:layout_height="match_parent"
              android:background="@drawable/bg_ppw_app">
 
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/close_dialog"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/close_select_button"/>
-    </RelativeLayout>
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="30dp">
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="@string/recommend_app"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:visibility="invisible"/>
+            android:visibility="invisible"/>-->
 
         <GridView
             android:id="@+id/recommend_app_gridveiw"
@@ -46,5 +31,19 @@
             android:numColumns="4"/>
     </LinearLayout>
 
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/close_dialog"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/close_select_button"/>
+    </RelativeLayout>
 
 </FrameLayout>

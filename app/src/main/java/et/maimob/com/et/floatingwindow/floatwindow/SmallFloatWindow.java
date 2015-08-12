@@ -28,7 +28,9 @@ import et.maimob.com.et.R;
  * 当前显示百分比
  * TODO 是否要另起刷新线程刷新小悬浮窗的剩余内存百分比
  */
-public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListener ,View.OnLongClickListener{
+public class SmallFloatWindow
+        implements View.OnTouchListener, View.OnClickListener, View.OnLongClickListener
+{
     private static final String TAG = "SmallFloatWindow";
     private boolean isShowing;
     private boolean isFirstShow;
@@ -217,7 +219,7 @@ public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListe
 
     @Override
     public boolean onLongClick(View v) {
-        Log.e(TAG,"Small FloatingWindow onLongClick");
+        Log.e(TAG, "Small FloatingWindow onLongClick");
         moveSmallFloatToNotification();
         return true;
     }
@@ -226,16 +228,17 @@ public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListe
 
         FloatWindowMgr.getInstance(mAppContext).removeShowingFloatWindow();
 
-        NotificationManager notificationManager= (NotificationManager) mAppContext.getSystemService(Context
+        NotificationManager notificationManager =
+                (NotificationManager) mAppContext.getSystemService(Context
 
 
-                .NOTIFICATION_SERVICE);
-        Intent intent=new Intent(mAppContext,BackToSFWActionReceiver.class);
+                                                                           .NOTIFICATION_SERVICE);
+        Intent intent = new Intent(mAppContext, BackToSFWActionReceiver.class);
 
         intent.setAction(BackToSFWActionReceiver.ACTION_BACKTOSFWINTENT);
 
-        PendingIntent pendingIntent=PendingIntent.getBroadcast(mAppContext,1,intent,PendingIntent
-                .FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = PendingIntent
+                .getBroadcast(mAppContext, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         Notification notification =
                 new Notification.Builder(mAppContext).setSmallIcon(R.mipmap.ic_launcher)
                                                      .setContentTitle("Small FloatingWindow")
@@ -248,7 +251,7 @@ public class SmallFloatWindow implements View.OnTouchListener, View.OnClickListe
                                                                                                        R.mipmap.ic_launcher))
                                                      .setContentIntent(pendingIntent).build();
 
-        notificationManager.notify(1,notification);
+        notificationManager.notify(1, notification);
 
     }
 

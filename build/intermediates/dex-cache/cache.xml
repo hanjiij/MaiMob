@@ -16,13 +16,6 @@
         <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-36eeb7bb19d893585a2eb408e18affdd9d97b3a5.jar" />
     </item>
     <item
-        jar="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\libs\AndroidScreenCap.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="837800e236b2d56dffc5d238bedeb8dcec005a12">
-        <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\AndroidScreenCap-d9fe137df46ffc2fc8326fc54bc77a7b151d4688.jar" />
-    </item>
-    <item
         jar="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -42,6 +35,13 @@
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
         <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\classes-4c72a0c64681be172e816c2169ebc6d3721e4c2e.jar" />
+    </item>
+    <item
+        jar="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\libs\AndroidScreenCap.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="837800e236b2d56dffc5d238bedeb8dcec005a12">
+        <dex dex="C:\Users\HJ\OneDrive\工程\Android Studio\MaiMob\app\build\intermediates\pre-dexed\debug\AndroidScreenCap-d9fe137df46ffc2fc8326fc54bc77a7b151d4688.jar" />
     </item>
 
 </items>

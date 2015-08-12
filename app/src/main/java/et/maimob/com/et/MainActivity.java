@@ -49,11 +49,6 @@ public class MainActivity
 
         init();
 
-        // xiugai
-        // 测试hanji
-        // ceshijipeng
-        // ceshihanji
-
         setListener();
 
         if (gotoPermissionSettings(MainActivity.this)) {
@@ -103,7 +98,7 @@ public class MainActivity
             DateUtils.setallfun(MainActivity.this);
 
 
-            // 判断是否为第一次打开软件，若是则向表中添加最近使用的app
+            // 判断是否为第一次打开软件，若是则向表中添加最近使用的app，若长度
             List<AppInfo> recentlyListInfo = GetAppInfo.Get_Recently_App_Info(MainActivity.this);
 
             if (recentlyListInfo.size() == 0) {

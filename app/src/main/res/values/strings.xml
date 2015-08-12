@@ -59,6 +59,7 @@
     <string name="recommend_app">推荐应用</string>
     <string name="my_gold">我的金币：</string>
     <string name="get_gold">获取金币</string>
+    <string name="title_activity_set__app__style_copy">Set_App_Style_copy</string>
 
 
 </resources>

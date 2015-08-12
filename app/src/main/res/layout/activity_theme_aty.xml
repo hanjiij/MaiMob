@@ -6,6 +6,15 @@
     android:orientation="vertical"
     tools:context="com.hj.popwindow.activitys.Theme_aty">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@drawable/bg_def_title"
+        android:gravity="center_horizontal"
+        android:text="@string/theme"/>
+
     <ListView
         android:id="@+id/theme_listview"
         android:layout_width="match_parent"

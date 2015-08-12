@@ -1,13 +1,22 @@
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hj.popwindow.activitys.My_Theme_aty">
+    tools:context="com.hj.popwindow.activitys.My_Theme_aty"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@drawable/bg_def_title"
+        android:gravity="center_horizontal"
+        android:text="@string/my_theme"/>
 
     <ListView
         android:id="@+id/my_theme_listveiw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-</RelativeLayout>
+</LinearLayout>

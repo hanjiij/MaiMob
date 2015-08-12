@@ -30,6 +30,11 @@ public class Config {
     public static String IS_TWO_OPEN="is_two_open";
     public static String IS_NINE_OPEN="is_nine_open";
 
+    public static String IS_APP_STYLE_IMAGE1="is_app_style_image1";
+    public static String IS_APP_STYLE_IMAGE2="is_app_style_image2";
+    public static String IS_APP_STYLE_FUNCTION_="is_app_style_function_";
+
+
 
     public static String ToDBC(String input) {
         char[] c = input.toCharArray();

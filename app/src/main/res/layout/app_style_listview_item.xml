@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:orientation="horizontal">
-        
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="280dp"
-            android:src="@drawable/two1"/>
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/app_style_two_1lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="#90646768"
+        android:background="@drawable/two1"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/app_style_two_2lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/app_style_two_1lv"
+        android:layout_below="@+id/app_style_two_1lv"
+        android:background="@drawable/two2"
+        android:src="#90646768"/>
 
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/two2"/>
+    <CheckBox
+        android:id="@+id/app_style_two_1checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/app_style_two_1lv"
+        android:layout_marginRight="20dp"
+        android:checked="true"
+        android:text="启动"/>
 
-        <CheckBox
-            android:layout_gravity="bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <CheckBox
+        android:id="@+id/app_style_two_2checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/app_style_two_2lv"
+        android:layout_marginRight="20dp"
+        android:text="启动"/>
 
-    </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>
