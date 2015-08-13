@@ -13,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import et.maimob.com.et.Config;
 import et.maimob.com.et.R;
 import et.maimob.com.et.datatype.AppInfo;
 import et.maimob.com.et.datatype.FunctionInfo;
@@ -74,13 +75,7 @@ public class DateUtils {
     }
 
     private static int[] getDrawable() {
-        int[] icon = {R.drawable.icon_func_wifi, R.drawable.icon_func_net,
-                R.drawable.icon_func_buletooth,
-                R.drawable.icon_func_screen, R.drawable.icon_func_light,
-                R.drawable.icon_func_system,
-                R.drawable.icon_func_app, R.drawable.icon_func_hotspot, R.drawable.icon_func_air,
-                R.drawable.icon_func_mute, R.drawable.icon_func_gps};
-        return icon;
+        return Config.function_black_image_resources;
     }
 
     /**

@@ -8,8 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import et.maimob.com.et.Config;
 import et.maimob.com.et.R;
 import et.maimob.com.et.datatype.FunctionInfo;
 
@@ -22,27 +25,40 @@ public class MyUsualFunctionAdapter
 
     private List<FunctionInfo> functionInfoList;
     private Context context;
-
-    private boolean isHide;
-    private Position position;
+    private boolean isSelect;
+    private String[] function_name_resources;
+    private Map<Integer,Integer> map;
 
     public MyUsualFunctionAdapter(Context context, List<FunctionInfo> functionInfoList,
-                                  Position position, boolean isHide) {
+                                  boolean isSelect) {
 
         this.functionInfoList = functionInfoList;
         this.context = context;
-        this.position = position;
-        this.isHide = isHide;
+        this.isSelect = isSelect;
+        function_name_resources = context.getResources().getStringArray(R.array.funcName);
+
+        map=new HashMap<>();
+        getMapId();
     }
 
     @Override
     public int getCount() {
-        return functionInfoList.size();
+
+        if (isSelect) {
+            return 11;
+        } else {
+            return functionInfoList.size();
+        }
     }
 
     @Override
     public FunctionInfo getItem(int position) {
-        return functionInfoList.get(position);
+
+        if (isSelect) {
+            return null;
+        } else {
+            return functionInfoList.get(position);
+        }
     }
 
     @Override
@@ -53,47 +69,47 @@ public class MyUsualFunctionAdapter
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        ViewHolder viewHolder;
+        if (isSelect) {
 
-        if (convertView == null) {
-            viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context)
-                    .inflate(R.layout.gridveiw_item_layout, null);
+                    .inflate(R.layout.usual_function_sel_gridveiw_item_layout, null);
 
-            viewHolder.ico = (ImageView) convertView.findViewById(R.id.item_app_icon);
-            viewHolder.name = (TextView) convertView.findViewById(R.id.item_app_name);
-            viewHolder.delete = (ImageView) convertView.findViewById(R.id.delete_app_shortcut);
+            ImageView function_ico = (ImageView) convertView.findViewById(R.id.item_function_icon);
 
-            convertView.setTag(viewHolder);
+            TextView function_name = (TextView) convertView.findViewById(R.id.item_function_name);
+
+            if (map.get(position)==null) {
+
+                function_ico.setBackgroundResource(R.drawable.bg_function_close);
+                function_ico.setImageResource(Config.function_black_image_resources[position]);
+            }else {
+
+                function_ico.setBackgroundResource(R.drawable.bg_function_open);
+                function_ico.setImageResource(Config.function_white_image_resources[position]);
+            }
+
+            function_name.setText(function_name_resources[position]);
+
+            return convertView;
         } else {
 
-            viewHolder = (ViewHolder) convertView.getTag();
+            View view = LayoutInflater.from(context)
+                    .inflate(R.layout.usual_function_gridveiw_item_layout, null);
+            ((ImageView) (view.findViewById(R.id.item_function_icon))).setImageDrawable(
+                    getItem(position).getIco());
+            return view;
         }
-
-        viewHolder.ico.setImageDrawable(getItem(position).getIco());
-        viewHolder.name.setText(getItem(position).getName());
-
-        viewHolder.delete.setVisibility(
-                (isHide || getItem(position).getId() == -1) ? View.INVISIBLE : View.VISIBLE);
-
-        viewHolder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                MyUsualFunctionAdapter.this.position.onPosition(position);
-            }
-        });
-
-        return convertView;
     }
 
+    @Override
+    public boolean isEnabled(int position) {
 
-    public final class ViewHolder {
-        public ImageView ico;
-        public TextView name;
-        public ImageView delete;
+        if (isSelect) {
+            return super.isEnabled(position);
+        } else {
+            return false;
+        }
     }
-
 
     /**
      * 通知数据更新
@@ -104,11 +120,20 @@ public class MyUsualFunctionAdapter
 
         this.functionInfoList = functionInfoList;
 
+        getMapId();
+
         this.notifyDataSetChanged();
     }
 
+    private void getMapId(){
 
-    public interface Position {
-        void onPosition(int position);
+        if (map.size()>0) {
+            map.clear();
+        }
+
+        for (int i = 0; i < functionInfoList.size(); i++) {
+            int id=functionInfoList.get(i).getId();
+            map.put(id,id);
+        }
     }
 }

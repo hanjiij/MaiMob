@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:src="#90646768"
-        android:background="@drawable/two1"/>
+        android:background="@drawable/two1"
+        android:src="#b0646768"/>
 
     <ImageView
         android:id="@+id/app_style_two_2lv"
@@ -21,7 +21,7 @@
         android:layout_alignRight="@+id/app_style_two_1lv"
         android:layout_below="@+id/app_style_two_1lv"
         android:background="@drawable/two2"
-        android:src="#90646768"/>
+        android:src="#b0646768"/>
 
     <CheckBox
         android:id="@+id/app_style_two_1checkbox"

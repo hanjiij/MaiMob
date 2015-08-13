@@ -1,111 +1,36 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_be"
     android:orientation="vertical"
     tools:context="com.hj.popwindow.activitys.appset.Set_Usual_Function_aty">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:background="@drawable/bg_def_title"
         android:gravity="center_horizontal"
-        android:text="@string/set_usual_function"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/wifi_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="wifi"/>
-
-        <Button
-            android:id="@+id/gprs_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="数据"/>
-
-        <Button
-            android:id="@+id/lanya_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="蓝牙"/>
-
-        <Button
-            android:id="@+id/jieping_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="截屏"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/shoudian_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="手电筒"/>
-
-
-        <Button
-            android:id="@+id/xitong_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="系统设置"/>
-
-        <Button
-            android:id="@+id/xuanfu_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="悬浮配置"/>
-
-        <Button
-            android:id="@+id/redian_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="热点"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/feixing_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="飞行模式"/>
-
-
-        <Button
-            android:id="@+id/jinying_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="静音"/>
-
-        <Button
-            android:id="@+id/gps_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="gps"/>
-    </LinearLayout>
-
+        android:layout_alignParentTop="true"
+        android:text="@string/set_usual_function"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
 
     <et.maimob.com.et.view.MyGridView
         android:id="@+id/usual_function_gridveiw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:background="#ffffff"
         android:numColumns="4"/>
 
-</LinearLayout>
+    <et.maimob.com.et.view.MyGridView
+        android:id="@+id/usual_function_select_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:numColumns="4"/>
+</RelativeLayout>

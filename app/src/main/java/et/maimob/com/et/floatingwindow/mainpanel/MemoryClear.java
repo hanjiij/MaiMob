@@ -21,6 +21,8 @@ public class MemoryClear {
         long used=total-ava;
         int percent= (int) (used/avg);
 
+        System.out.println(">>>>>>>>>>>>>>>"+total+"++"+ava);
+
         return percent;
     }
     public static long getAvailMemory(Context context)
@@ -47,6 +49,7 @@ public class MemoryClear {
             FileReader localFileReader = new FileReader(str1);
             BufferedReader localBufferedReader = new BufferedReader(
                     localFileReader, 8192);
+
             str2 = localBufferedReader.readLine();// 读取meminfo第一行，系统总内存大小
 
             arrayOfString = str2.split("\\s+");
@@ -59,6 +62,7 @@ public class MemoryClear {
 
         } catch (IOException e) {
         }
+
         //return Formatter.formatFileSize(context, initial_memory);// Byte转换为KB或者MB，内存大小规格化
         return initial_memory/(1024*1024);
     }

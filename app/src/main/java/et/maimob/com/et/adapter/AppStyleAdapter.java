@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import et.maimob.com.et.Config;
+import et.maimob.com.et.IMainPanelDataChange;
 import et.maimob.com.et.R;
 import et.maimob.com.et.database.data.DateUtils;
 
@@ -67,9 +68,7 @@ public class AppStyleAdapter
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        ViewHolder viewHolder;
-
-//        if (convertView == null) {
+        final ViewHolder viewHolder;
 
         viewHolder = new ViewHolder();
         convertView =
@@ -87,29 +86,37 @@ public class AppStyleAdapter
 
         convertView.setTag(viewHolder);
 
-//        } else {
-//
-//            viewHolder = (ViewHolder) convertView.getTag();
-//        }
-
         viewHolder.app_style_imageview
                 .setBackgroundResource(getItem(position).get(Config.IS_APP_STYLE_IMAGE1));
         viewHolder.app_function_imageview
                 .setBackgroundResource(getItem(position).get(Config.IS_APP_STYLE_IMAGE2));
 
+        // 判断快捷功能是否开启
+        boolean isopen = function_status.get(position) == 1;
+        if (isopen) {
 
-        if (DateUtils.getSharedPreference(context,Config.IS_APP_STYLE_FUNCTION_)==position) {
+            viewHolder.app_function_checkbox.setChecked(isopen);
+            viewHolder.app_function_imageview.setAlpha(0);
+        } else {
+
+            viewHolder.app_function_checkbox.setChecked(isopen);
+            viewHolder.app_function_imageview.setAlpha(90);
+        }
+
+        if (DateUtils.getSharedPreference(context, Config.IS_APP_STYLE_FUNCTION_) == position) {
 
             viewHolder.app_style_checkbox.setChecked(true);
             viewHolder.app_function_checkbox.setEnabled(true);
-        }else {
+
+            viewHolder.app_style_imageview.setAlpha(0);
+        } else {
 
             viewHolder.app_style_checkbox.setChecked(false);
             viewHolder.app_function_checkbox.setEnabled(false);
+
+            viewHolder.app_style_imageview.setAlpha(90);
+            viewHolder.app_function_imageview.setAlpha(90);
         }
-
-
-        viewHolder.app_function_checkbox.setChecked(function_status.get(position) == 1);
 
         viewHolder.app_style_checkbox.setOnCheckedChangeListener(
                 new CompoundButton.OnCheckedChangeListener() {
@@ -118,6 +125,13 @@ public class AppStyleAdapter
 
                         DateUtils.setSharedPreference(context,
                                 Config.IS_APP_STYLE_FUNCTION_, position);
+
+                        if (isChecked) {
+
+                            IMainPanelDataChange.getInstance()
+                                    .changeMainPanelStyle(position % 2 == 0 ? 1 : 2,
+                                            viewHolder.app_function_checkbox.isChecked());
+                        }
 
                         AppStyleAdapter.this.notifyDataSetChanged();
                     }
@@ -133,6 +147,9 @@ public class AppStyleAdapter
 
                         DateUtils.setSharedPreference(context,
                                 Config.IS_APP_STYLE_FUNCTION_ + position, isChecked ? 1 : 0);
+
+                            IMainPanelDataChange.getInstance()
+                                    .changeMainPanelStyle(position % 2 == 0 ? 1 : 2,isChecked);
 
                         AppStyleAdapter.this.notifyDataSetChanged();
                     }

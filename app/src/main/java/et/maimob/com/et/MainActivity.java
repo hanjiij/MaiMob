@@ -44,16 +44,11 @@ public class MainActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         InitDataBase();
 
         init();
 
         setListener();
-
-        if (gotoPermissionSettings(MainActivity.this)) {
-            Toast.makeText(MainActivity.this, "请打开悬浮窗权限", Toast.LENGTH_SHORT).show();
-        }
 
         inithandler();
     }
@@ -75,7 +70,6 @@ public class MainActivity
                         FloatWindowMgr.getInstance(MainActivity.this).stopFloatWindowService();
                     }
                 }
-
             }
         };
     }
@@ -133,6 +127,11 @@ public class MainActivity
             }
 
             DateUtils.setSharedPreference(MainActivity.this, Config.IS_FIRST_START, 1);
+
+
+            if (gotoPermissionSettings(MainActivity.this)) {
+                Toast.makeText(MainActivity.this, "请打开悬浮窗权限", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import et.maimob.com.et.R;
-import et.maimob.com.et.activitys.appset.Set_App_Style_aty;
+import et.maimob.com.et.activitys.appset.Set_App_Style_copy;
 import et.maimob.com.et.activitys.appset.Set_Usual_App_aty;
 import et.maimob.com.et.activitys.appset.Set_Usual_Function_aty;
 
@@ -34,7 +34,7 @@ public class Set_App_aty
         set_app_style_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Set_App_aty.this, Set_App_Style_aty.class));
+                startActivity(new Intent(Set_App_aty.this, Set_App_Style_copy.class));
             }
         });
 

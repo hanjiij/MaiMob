@@ -54,7 +54,7 @@ public class MyAppInfoAdapter
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.gridveiw_item_layout, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.usual_app_gridveiw_item_layout, null);
 
         ImageView imageView = (ImageView) view.findViewById(R.id.item_app_icon);
 
