@@ -22,7 +22,7 @@ import java.util.List;
 import et.maimob.com.et.IMainPanelDataChange;
 import et.maimob.com.et.R;
 import et.maimob.com.et.adapter.MyAppInfoAdapter;
-import et.maimob.com.et.database.data.DateUtils;
+import et.maimob.com.et.database.DateUtils;
 import et.maimob.com.et.datatype.AppInfo;
 import et.maimob.com.et.util.GetAppInfo;
 import et.maimob.com.et.view.MyGridView;

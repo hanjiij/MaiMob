@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import et.maimob.com.et.Config;
 import et.maimob.com.et.IMainPanelDataChange;
 import et.maimob.com.et.R;
-import et.maimob.com.et.database.data.DateUtils;
-import et.maimob.com.et.database.data.MHelper;
+import et.maimob.com.et.database.DateUtils;
+import et.maimob.com.et.database.MHelper;
 
 
 public class Set_App_Style_aty

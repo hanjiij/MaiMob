@@ -18,7 +18,7 @@ import et.maimob.com.et.Config;
 import et.maimob.com.et.R;
 import et.maimob.com.et.activitys.appabout.App_Introduction;
 import et.maimob.com.et.activitys.appabout.App_User_Feedback;
-import et.maimob.com.et.database.data.DateUtils;
+import et.maimob.com.et.database.DateUtils;
 import et.maimob.com.et.floatingwindow.floatwindow.FloatWindowMgr;
 
 public class About_App_aty

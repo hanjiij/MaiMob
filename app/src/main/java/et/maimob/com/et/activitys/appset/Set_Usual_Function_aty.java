@@ -16,8 +16,8 @@ import et.maimob.com.et.Config;
 import et.maimob.com.et.IMainPanelDataChange;
 import et.maimob.com.et.R;
 import et.maimob.com.et.adapter.MyUsualFunctionAdapter;
-import et.maimob.com.et.database.data.DateUtils;
-import et.maimob.com.et.database.data.MHelper;
+import et.maimob.com.et.database.DateUtils;
+import et.maimob.com.et.database.MHelper;
 import et.maimob.com.et.datatype.FunctionInfo;
 import et.maimob.com.et.view.MyGridView;
 

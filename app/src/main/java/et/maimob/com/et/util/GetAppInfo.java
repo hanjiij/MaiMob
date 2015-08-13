@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import et.maimob.com.et.database.data.DateUtils;
+import et.maimob.com.et.database.DateUtils;
 import et.maimob.com.et.datatype.AppInfo;
 
 /**
