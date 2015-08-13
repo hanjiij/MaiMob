@@ -85,9 +85,16 @@ public class MainActivity
 
             DateUtils.setSharedPreference(MainActivity.this, Config.IS_FLOATING_WINDOW, 1);
 
+
             MAPP.setStyleInfo(MainActivity.this, 1);
 
-            DateUtils.setSharedPreference(MainActivity.this, Config.IS_TWO_OPEN, 1);
+//            DateUtils.setSharedPreference(MainActivity.this, Config.IS_TWO_OPEN, 1);
+
+            DateUtils.setSharedPreference(MainActivity.this,
+                    Config.IS_APP_STYLE_FUNCTION_, 0);
+
+            DateUtils.setSharedPreference(MainActivity.this,
+                    Config.IS_APP_STYLE_FUNCTION_+"0", 1);
 
             DateUtils.setallfun(MainActivity.this);
 

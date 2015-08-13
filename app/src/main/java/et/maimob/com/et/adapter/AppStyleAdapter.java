@@ -17,6 +17,7 @@ import et.maimob.com.et.Config;
 import et.maimob.com.et.IMainPanelDataChange;
 import et.maimob.com.et.R;
 import et.maimob.com.et.database.data.DateUtils;
+import et.maimob.com.et.database.data.MHelper;
 
 /**
  * Created by HJ on 2015/8/12.
@@ -93,6 +94,7 @@ public class AppStyleAdapter
 
         // 判断快捷功能是否开启
         boolean isopen = function_status.get(position) == 1;
+
         if (isopen) {
 
             viewHolder.app_function_checkbox.setChecked(isopen);
@@ -133,6 +135,12 @@ public class AppStyleAdapter
                                             viewHolder.app_function_checkbox.isChecked());
                         }
 
+                        DateUtils.setConfig(context, position % 2 == 0 ? 1 : 2,
+                                MHelper.TYPE_APPSTYLE);
+                        DateUtils.setConfig(context,
+                                viewHolder.app_function_checkbox.isChecked() ? 1 : 0,
+                                MHelper.TYPE_FUNCTIONISOPEN);
+
                         AppStyleAdapter.this.notifyDataSetChanged();
                     }
                 });
@@ -148,10 +156,14 @@ public class AppStyleAdapter
                         DateUtils.setSharedPreference(context,
                                 Config.IS_APP_STYLE_FUNCTION_ + position, isChecked ? 1 : 0);
 
-                            IMainPanelDataChange.getInstance()
-                                    .changeMainPanelStyle(position % 2 == 0 ? 1 : 2,isChecked);
+                        IMainPanelDataChange.getInstance()
+                                .changeMainPanelStyle(position % 2 == 0 ? 1 : 2, isChecked);
 
                         AppStyleAdapter.this.notifyDataSetChanged();
+
+
+                        DateUtils.setConfig(context,isChecked ? 1 : 0,
+                                MHelper.TYPE_FUNCTIONISOPEN);
                     }
                 });
 
